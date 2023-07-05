@@ -1,3 +1,4 @@
+// Require necessary npm packages
 const express = require('express');
 const routes = require('./controllers');
 const exphbs = require('express-handlebars');
@@ -9,6 +10,7 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+// Session setup
 const sess = {
   secret: 'secretKey',
   cookie: {
@@ -25,20 +27,20 @@ const sess = {
   }),
 };
 
-// Middleware
+// Middleware setup
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(session(sess));
 
-// View engine setup
+// Handlebars setup
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
-// Routes
-app.use(routes);
+// Apply routes
+app.use('/api', routes); // Updated this line
 
-// Start the server
+// Start the server after syncing the database
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => {
     console.log(`App listening on port ${PORT}!`);
