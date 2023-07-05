@@ -3,9 +3,9 @@ const userController = require('../controllers/userController');
 const blogController = require('../controllers/blogController');
 
 // User routes
-router.use('/users', userController);
+router.use('/user', userController);
 
 // Blog routes
-router.use('/blogs', blogController);
+router.use('/blog', blogController);
 
 module.exports = router;
