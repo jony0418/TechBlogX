@@ -1,9 +1,9 @@
 // Require necessary npm packages
-const express = require('express');
-const routes = require('./controllers');
-const exphbs = require('express-handlebars');
-const session = require('express-session');
 const path = require('path');
+const express = require('express');
+const session = require('express-session');
+const exphbs = require('express-handlebars');
+const routes = require('./controllers');
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
@@ -38,7 +38,7 @@ app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
 // Apply routes
-app.use('/api', routes); // Updated this line
+app.use(routes);
 
 // Start the server after syncing the database
 sequelize.sync({ force: false }).then(() => {

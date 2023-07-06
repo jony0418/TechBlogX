@@ -1,7 +1,8 @@
+const router = require('express').Router();
 const { Comment } = require('../../models');
 
 // Get all comments
-exports.getAllComments = async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const comments = await Comment.findAll();
     res.status(200).json(comments);
@@ -9,10 +10,10 @@ exports.getAllComments = async (req, res) => {
     console.error(error);
     res.status(500).json({ error: 'Internal server error' });
   }
-};
+});
 
 // Create a new comment
-exports.createComment = async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const { content, userId, blogId } = req.body;
     const comment = await Comment.create({ content, userId, blogId });
@@ -21,10 +22,10 @@ exports.createComment = async (req, res) => {
     console.error(error);
     res.status(500).json({ error: 'Internal server error' });
   }
-};
+});
 
 // Update a comment
-exports.updateComment = async (req, res) => {
+router.put('/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const { content } = req.body;
@@ -39,10 +40,10 @@ exports.updateComment = async (req, res) => {
     console.error(error);
     res.status(500).json({ error: 'Internal server error' });
   }
-};
+});
 
 // Delete a comment
-exports.deleteComment = async (req, res) => {
+router.delete('/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const comment = await Comment.findByPk(id);
@@ -55,4 +56,6 @@ exports.deleteComment = async (req, res) => {
     console.error(error);
     res.status(500).json({ error: 'Internal server error' });
   }
-};
+});
+
+module.exports = router;
