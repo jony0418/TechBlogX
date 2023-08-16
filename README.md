@@ -2,6 +2,25 @@
 
 A CMS-style blog site where developers can publish their blog posts and comment on other developers' posts.
 
+## Screenshots
+
+Below are some screenshots of the CMS-Style Blog Site:
+
+### Homepage
+![Homepage](/screenshots/homepage.png)
+
+### Login Page
+![Login Page](/screenshots/login.png)
+
+### Signup Page
+![Signup Page](/screenshots/signup.png)
+
+### Post Details
+![Post Details](/screenshots/post-details.png)
+
+### Table of Contents
+![Comments Section](/screenshots/table.png)
+
 ## Table of Contents
 
 - [Description](#description)
