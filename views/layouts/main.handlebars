@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Developer Blog</title>
     <link rel="stylesheet" href="/css/style.css">
+    {{#if isDashboard}}
+        <script src="/js/dashboard.js"></script>
+    {{/if}}
+    {{#if isLogin}}
+        <script src="/js/login.js"></script>
+    {{/if}}
+    {{#if isLogout}}
+        <script src="/js/logout.js"></script>
+    {{/if}}
+    {{#if isPost}}
+        <script src="/js/post.js"></script>
+    {{/if}}
+    {{#if isSignup}}
+        <script src="/js/signup.js"></script>
+    {{/if}}
 </head>
 <body>
     <nav>
