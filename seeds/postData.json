@@ -1,0 +1,18 @@
+[
+    {
+      "title": "Introduction to JavaScript",
+      "contents": "JavaScript is a programming language that enables interactive web pages...",
+      "user_id": 1
+    },
+    {
+      "title": "Understanding CSS Flexbox",
+      "contents": "Flexbox is a one-dimensional layout method for laying out items in rows or columns...",
+      "user_id": 2
+    },
+    {
+      "title": "Getting Started with React",
+      "contents": "React is a popular JavaScript library for building user interfaces...",
+      "user_id": 3
+    }
+  ]
+  

@@ -1,0 +1,18 @@
+[
+    {
+      "comment_text": "Great post! Thanks for sharing.",
+      "user_id": 1,
+      "post_id": 1
+    },
+    {
+      "comment_text": "I found this very helpful. Thank you!",
+      "user_id": 2,
+      "post_id": 2
+    },
+    {
+      "comment_text": "Interesting perspective. I never thought about it that way.",
+      "user_id": 3,
+      "post_id": 1
+    }
+  ]
+  
