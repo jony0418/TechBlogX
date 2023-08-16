@@ -1,0 +1,56 @@
+/* Reset some default browser styles */
+body, h1, h2, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a background color and set the font */
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Style the navigation bar */
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+/* Add some spacing around the main content */
+main {
+    padding: 2rem;
+}
+
+/* Style the headings and links in the articles */
+article h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+article h2 a {
+    color: #333;
+    text-decoration: none;
+}
+
+article p {
+    margin-bottom: 1rem;
+}
+
+/* Style the footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
