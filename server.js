@@ -5,9 +5,11 @@ const path = require('path');
 const routes = require('./controllers');
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
+const userRoutes = require('./controllers/userRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
+app.use('/', userRoutes);
 
 // Set up sessions with Sequelize
 const sess = {
