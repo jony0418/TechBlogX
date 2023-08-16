@@ -1,0 +1,19 @@
+<article>
+    <h1>{{title}}</h1>
+    <p>{{contents}}</p>
+    <p>Posted by {{username}} on {{created_at}}</p>
+</article>
+<section>
+    <h2>Comments</h2>
+    {{#each comments}}
+        <div class="comment">
+            <p>{{comment_text}}</p>
+            <p>By {{username}} on {{created_at}}</p>
+        </div>
+    {{/each}}
+    <form action="/post/{{id}}/comment" method="post">
+        <label for="comment">Leave a comment:</label>
+        <textarea id="comment" name="comment" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</section>

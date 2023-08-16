@@ -54,3 +54,30 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+/* Style the forms */
+form {
+    margin-bottom: 2rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+input, textarea, button {
+    display: block;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Style the comments */
+.comment {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
